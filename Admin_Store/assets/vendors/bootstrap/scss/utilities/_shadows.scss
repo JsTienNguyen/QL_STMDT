@@ -1,0 +1,17 @@
+// stylelint-disable declaration-no-Important
+
+.shadow-sm {
+    box-shadow: $box-shadow-sm !Important;
+}
+
+.shadow {
+    box-shadow: $box-shadow !Important;
+}
+
+.shadow-lg {
+    box-shadow: $box-shadow-lg !Important;
+}
+
+.shadow-none {
+    box-shadow: none !Important;
+}

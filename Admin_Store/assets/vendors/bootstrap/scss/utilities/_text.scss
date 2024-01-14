@@ -1,0 +1,134 @@
+// stylelint-disable declaration-no-Important
+
+//
+// Text
+//
+
+.text-monospace {
+  font-family: $font-family-monospace !Important;
+}
+
+// Alignment
+
+.text-justify {
+  text-align: justify !Important;
+}
+
+.text-wrap {
+  white-space: normal !Important;
+}
+
+.text-nowrap {
+  white-space: nowrap !Important;
+}
+
+.text-truncate {
+  @include text-truncate;
+}
+
+// Responsive alignment
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .text#{$infix}-left {
+      text-align: left !Important;
+    }
+
+    .text#{$infix}-right {
+      text-align: right !Important;
+    }
+
+    .text#{$infix}-center {
+      text-align: center !Important;
+    }
+  }
+}
+
+// Transformation
+
+.text-lowercase {
+  text-transform: lowercase !Important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !Important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !Important;
+}
+
+// Weight and italics
+
+.font-weight-light {
+  font-weight: $font-weight-light !Important;
+}
+
+.font-weight-lighter {
+  font-weight: $font-weight-lighter !Important;
+}
+
+.font-weight-normal {
+  font-weight: $font-weight-normal !Important;
+}
+
+.font-weight-bold {
+  font-weight: $font-weight-bold !Important;
+}
+
+.font-weight-bolder {
+  font-weight: $font-weight-bolder !Important;
+}
+
+.font-italic {
+  font-style: italic !Important;
+}
+
+// Contextual colors
+
+.text-white {
+  color: $white !Important;
+}
+
+@each $color, $value in $theme-colors {
+  @include text-emphasis-variant(".text-#{$color}", $value);
+}
+
+.text-body {
+  color: $body-color !Important;
+}
+
+.text-muted {
+  color: $text-muted !Important;
+}
+
+.text-black-50 {
+  color: rgba($black, .5) !Important;
+}
+
+.text-white-50 {
+  color: rgba($white, .5) !Important;
+}
+
+// Misc
+
+.text-hide {
+  @include text-hide($ignore-warning: true);
+}
+
+.text-decoration-none {
+  text-decoration: none !Important;
+}
+
+.text-break {
+  word-break: break-word !Important; // IE & < Edge 18
+  overflow-wrap: break-word !Important;
+}
+
+// Reset
+
+.text-reset {
+  color: inherit !Important;
+}

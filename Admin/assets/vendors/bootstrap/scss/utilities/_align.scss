@@ -1,0 +1,26 @@
+// stylelint-disable declaration-no-Important
+
+.align-baseline {
+    vertical-align: baseline !Important;
+}
+
+// Browser default
+.align-top {
+    vertical-align: top !Important;
+}
+
+.align-middle {
+    vertical-align: middle !Important;
+}
+
+.align-bottom {
+    vertical-align: bottom !Important;
+}
+
+.align-text-bottom {
+    vertical-align: text-bottom !Important;
+}
+
+.align-text-top {
+    vertical-align: text-top !Important;
+}
